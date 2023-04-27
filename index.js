@@ -24,7 +24,6 @@ console.log(addresses[0]); // outputs your local IPv4 address
 
 const server = http.createServer((req, res) => {
   if (req.method === 'PUT' && req.url === '/test') {
-    count++;
     const filename = process.argv[2];
     fs.readFile(filename, (err, data) => {
       if (err) {
